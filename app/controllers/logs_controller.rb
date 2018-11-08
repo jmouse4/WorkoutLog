@@ -1,6 +1,6 @@
 class LogsController < ApplicationController
     def index
-        @log = Log.all
+        @logs = Log.all
     end 
     def show
         @log = Log.find(params[:id])
