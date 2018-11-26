@@ -10,11 +10,9 @@ class LogsController < ApplicationController
     end
     def create
         @log = Log.new(log_params)
-        byebug
         
         if @log.save
             redirect_to @log
-            byebug
         else
             render 'new'
         end

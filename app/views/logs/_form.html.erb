@@ -6,7 +6,7 @@
             this log from being saved:       
         </h2>       
         <ul>         
-            <% @log.errors.full_messages.each do |msg| %>           
+            <% @errors.full_messages.each do |msg| %>           
                 <li><%= msg %></li>         
             <% end %>       
         </ul>     
