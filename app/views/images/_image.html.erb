@@ -1,0 +1,14 @@
+<p>
+    <strong>Selfie:</strong>
+    <%= image.name %>
+</p>
+
+<p>
+    <%= image_tag image.image_url.to_s %>
+</p>
+
+<p>
+    <%= link_to 'Delete', [image.log, image],
+        method: :delete,
+        data: {comfirm: 'Are you sure'} %>
+</p>

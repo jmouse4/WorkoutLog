@@ -7,4 +7,11 @@
     <strong>Text:</strong>
     <%= @log.text %>
 </p>
+
+<h2>Selfies</h2>
+<%= render @log.images %>
+
+<h2>Add a selfie</h2>
+<%= render 'images/form' %>
+
 <%= link_to 'Back to Workout Logs', logs_path %>
