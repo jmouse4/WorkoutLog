@@ -30,6 +30,10 @@ class LogsController < ApplicationController
     end 
     def destroy
         @log = Log.find(params[:id])
+        @pictures = @log.pictures.all
+        @pictures.each do |f|
+            f.destroy
+        end
         @log.destroy
         
         redirect_to logs_path

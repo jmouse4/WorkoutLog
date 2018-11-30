@@ -2,7 +2,9 @@
     <strong>Picture Name:</strong>
     <%= picture.name %>
 </p>
-
+<div>
+    <%= image_tag picture.image_url.to_s %>
+</div>
 <p>
     <%= link_to 'Delete Picture', [picture.log, picture],
         method: :delete,
