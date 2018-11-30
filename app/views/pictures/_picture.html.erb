@@ -1,0 +1,10 @@
+<p>
+    <strong>Picture Name:</strong>
+    <%= comment.name %>
+</p>
+
+<p>
+    <%= link_to 'Delete Picture', [picture.log, picture],
+        method: :delete,
+        data: {comfirm: 'Are you sure'} %>
+</p>

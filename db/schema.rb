@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_08_045702) do
+ActiveRecord::Schema.define(version: 2018_11_30_161644) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
@@ -24,6 +24,14 @@ ActiveRecord::Schema.define(version: 2018_11_08_045702) do
     t.text "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "pictures", force: :cascade do |t|
+    t.string "name"
+    t.integer "log_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["log_id"], name: "index_pictures_on_log_id"
   end
 
 end
