@@ -1,3 +1,5 @@
 class Picture < ApplicationRecord
-  belongs_to :log
+    attr_accessor :name, :image
+    belongs_to :log
+    mount_uploader :image, ImageUploader
 end
