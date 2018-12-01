@@ -8,10 +8,21 @@
     <%= @log.text %>
 </p>
 
+<p>
+    <%= link_to 'Edit', edit_log_path(@log) %>
+    <%= link_to 'Destroy', 
+        log_path(@log), 
+        method: :delete, 
+        data: { confirm: 'Are you sure?' } %>
+
+</p>
+
 <h2>Pictures</h2>
 <%= render @log.pictures %>
 
-<%= link_to "Add a Picture", new_log_picture_path(:log_id => @log) %>
-
+<p>
+    <%= link_to "Add a Picture", new_log_picture_path(:log_id => @log) %>
 <%= link_to 'Back to Workout Logs', logs_path %>
+
+</p>
 

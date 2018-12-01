@@ -3,19 +3,17 @@
 <table>   
     <tr>     
         <th>Title</th>     
-        <th>Text</th>   
     </tr>
     
     <% @logs.each do |log| %>
         <tr>
             <td><%= log.title %></td>
-            <td><%= log.text %></td>
             <td><%= link_to 'Show', log_path(log) %></td>
-            <td><%= link_to 'Edit', edit_log_path(log) %></td>
-            <td><%= link_to 'Destroy',
-                    log_path(log),
-                    method: :delete,
-                    data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Destroy', 
+                        log_path(log), 
+                        method: :delete, 
+                        data: { confirm: 'Are you sure?' } %></td>
+
         </tr>
         
         <% end %>
