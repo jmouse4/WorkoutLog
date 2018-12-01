@@ -1,4 +1,7 @@
 class PicturesController < ApplicationController
+    def new
+        @picture = Picture.new(:log_id => params[:log_id])
+    end
     def create
         @log = Log.find(params[:log_id])
         @picture = @log.pictures.create(picture_params)
@@ -14,6 +17,6 @@ class PicturesController < ApplicationController
     
     private
         def picture_params
-            params.require(:picture).permit(:name)
+            params.require(:picture).permit(:name, :image)
         end
 end

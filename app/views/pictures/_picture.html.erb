@@ -3,7 +3,7 @@
     <%= picture.name %>
 </p>
 <div>
-    <%= image_tag picture.image_url.to_s %>
+    <%= image_tag picture.image_url.to_s if picture.image_url.present? %>
 </div>
 <p>
     <%= link_to 'Delete Picture', [picture.log, picture],

@@ -11,7 +11,7 @@
 <h2>Pictures</h2>
 <%= render @log.pictures %>
 
-<h2>Add a Picture</h2>
-<%= render 'pictures/form' %>
+<%= link_to "Add a Picture", new_log_picture_path(:log_id => @log) %>
 
 <%= link_to 'Back to Workout Logs', logs_path %>
+
