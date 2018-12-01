@@ -9,7 +9,20 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body align="center">
+    <header class='clearfix'>
+  <div class="left-nav" align="center">
+    <ul>
+      <li><%= link_to "My Workout Logs", controller: 'logs' %></li>
+    </ul>
+  </div>
+  <div class="right-nav">
+    <ul>
+      <li><%= link_to "New Workout Log", new_log_path %></li>
+    </ul>
+  </div>
+</header><div class='content'>
+  <%= yield %>
+</div>
   </body>
 </html>
