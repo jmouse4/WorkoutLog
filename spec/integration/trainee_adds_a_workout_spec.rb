@@ -31,7 +31,7 @@ feature "Trainee navigates to the workout log" do
     click_button "Create Log"
     click_link "Edit"
     expect(page).to have_content("New workout log")
-    fill_in "Title", with: "New workout log (edited"
+    fill_in "Title", with: "New workout log (edited)"
     fill_in "Text", with: "New workout log 1 (edited)"
     click_button "Update Log"
     expect(page).to have_content("New workout log 1 (edited)")
